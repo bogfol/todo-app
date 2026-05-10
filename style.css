@@ -19,9 +19,14 @@ form {
   gap: 8px;
 }
 
-input {
+input,
+select {
   flex: 1;
   padding: 8px;
+}
+
+select {
+  flex: 0 0 105px;
 }
 
 button {
@@ -31,11 +36,52 @@ button {
 
 li {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: 8px;
   padding: 8px;
   margin-top: 8px;
   background: #eee;
   border-radius: 6px;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 8px;
+  min-width: 0;
+}
+
+.task-text {
+  overflow-wrap: anywhere;
+}
+
+.priority-badge {
+  flex: 0 0 auto;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.priority-low {
+  background: #dfe7ef;
+  color: #34495e;
+}
+
+.priority-medium {
+  background: #fff1c2;
+  color: #7a5200;
+}
+
+.priority-high {
+  background: #ffd6d6;
+  color: #9f1d1d;
+}
+
+li button {
+  flex: 0 0 auto;
 }
 
 .completed {
