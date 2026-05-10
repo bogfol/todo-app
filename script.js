@@ -2,6 +2,7 @@ const form = document.getElementById("todo-form");
 const input = document.getElementById("todo-input");
 const prioritySelect = document.getElementById("todo-priority");
 const list = document.getElementById("todo-list");
+const clearButton = document.getElementById("clear-button");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -51,3 +52,7 @@ function addTask(taskText, priority = "Medium") {
   li.appendChild(deleteButton);
   list.appendChild(li);
 }
+
+clearButton.addEventListener("click", function () {
+  list.innerHTML = "";
+});
