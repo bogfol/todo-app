@@ -7,23 +7,52 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="app">
-    <h1>Todo App</h1>
+  <div class="app-shell">
+    <aside class="list-sidebar" aria-label="Todo lists">
+      <button id="new-list-button" type="button">New List</button>
+      <ul id="todo-lists" class="list-nav"></ul>
+    </aside>
 
-    <form id="todo-form">
-      <input id="todo-input" type="text" placeholder="Enter a task" />
-      <select id="todo-priority" aria-label="Task priority">
-        <option value="Low">Low</option>
-        <option value="Medium" selected>Medium</option>
-        <option value="High">High</option>
-      </select>
-      <button type="submit">Add</button>
-    </form>
+    <main class="app">
+      <div class="list-header">
+        <h1 id="active-list-title">Main List</h1>
+        <button
+          id="delete-list-button"
+          class="delete-list-button"
+          type="button"
+          aria-label="Delete current list"
+          title="Delete current list"
+        >
+          &#128465;
+        </button>
+      </div>
 
-    <button id="clear-button" type="button">Clear All</button>
+      <form id="todo-form">
+        <input id="todo-input" type="text" placeholder="Enter a task" />
+        <select id="todo-priority" aria-label="Task priority">
+          <option value="Low">Low</option>
+          <option value="Medium" selected>Medium</option>
+          <option value="High">High</option>
+        </select>
+        <input id="todo-due-date" type="date" aria-label="Due date" />
+        <button type="submit">Add</button>
+      </form>
 
-    <ul id="todo-list"></ul>
-  </main>
+      <div class="bulk-actions">
+        <button id="mark-all-button" type="button">Mark All as Done</button>
+        <button id="clear-button" type="button">Clear All</button>
+      </div>
+
+      <div class="task-grid task-header">
+        <span>Task</span>
+        <span>Priority</span>
+        <span>Due Date</span>
+        <span>Actions</span>
+      </div>
+
+      <ul id="todo-list"></ul>
+    </main>
+  </div>
 
   <script src="script.js"></script>
 </body>
