@@ -194,15 +194,6 @@ li {
   color: #111;
 }
 
-.task-priority-cell:focus-within {
-  background: white;
-}
-
-.task-priority-cell:focus-within .task-priority-select {
-  background: white;
-  color: #111;
-}
-
 .task-priority-select option {
   background: white;
   color: #111;
